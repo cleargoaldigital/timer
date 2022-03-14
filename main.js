@@ -1,12 +1,8 @@
-const body =document.getElementById('body');
-
-const heading = document.createElement('h1');
+const heading =document.getElementById('title');
 
 heading.textContent = "Timer with Javascript";
 
-document.body.appendChild(heading);
-
-
+// Timer with Javascript
 
 class Clock{
    constructor ({template}) {
