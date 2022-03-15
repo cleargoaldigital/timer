@@ -46,9 +46,9 @@ let myTimer = new Clock({template: 'h:m:s'});
 // myTimer.start();
 // myTimer.stop();
 
-const display = document.getElementById('display');
+// const display = document.getElementById('display');
 
-display.textContent = myTimer.start();
+// display.textContent = this.template;
 
 let start = document.getElementById('start');
 start.addEventListener("click", startTimer);
