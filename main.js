@@ -1,4 +1,5 @@
-document.getElementById('title').textContent = "Timer with Javascript";
+let heading = document.getElementById('title');
+heading.textContent = "Timer with Javascript";
 
 // Timer with Javascript
 
@@ -44,7 +45,8 @@ let myTimer = new Clock({template: 'h:m:s'});
 // myTimer.start();
 // myTimer.stop();
 
-document.getElementById('display').innerHTML = hours + "h: " + minutes + "m: "+ secs +"s";
+let display = document.getElementById('display');
+dispaly.innerHTML = hours + "h: " + minutes + "m: "+ secs +"s";
 
 let start = document.getElementById('start');
 start.addEventListener("click", startTimer);
