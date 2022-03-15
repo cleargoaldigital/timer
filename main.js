@@ -1,6 +1,4 @@
-const heading =document.getElementById('title');
-
-heading.textContent = "Timer with Javascript";
+document.getElementById('title').textContent = "Timer with Javascript";
 
 // Timer with Javascript
 
