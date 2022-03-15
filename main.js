@@ -46,9 +46,9 @@ let myTimer = new Clock({template: 'h:m:s'});
 // myTimer.start();
 // myTimer.stop();
 
-// const display = document.getElementById('display');
+const display = document.getElementById('display');
 
-// display.textContent = this.template;
+display.textContent = myTimer.start();
 
 let start = document.getElementById('start');
 start.addEventListener("click", startTimer);
@@ -63,3 +63,36 @@ stop.addEventListener("click", stopTimer);
 function stopTimer() {
    myTimer.stop();
 }
+
+
+//Countdown timer
+
+// Set the date we're counting down to
+let countDownDate = new Date("May 29, 2023 12:00:00").getTime();
+
+// Update the count down every 1 second
+let countdown = setInterval(function() {
+
+  // Get today's date and time
+  let now = new Date().getTime();
+    
+  // Find the distance between now and the countdown date
+  let timeInterval = countDownDate - now;
+    
+  // Calculate time for days, hours, minutes and seconds.
+  
+  let days = Math.floor(timeInterval / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeInterval % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeInterval % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((timeInterval % (1000 * 60)) / 1000);
+    
+  // Render the result in the browser with id="display-date"
+  document.getElementById("display-date").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // When the countdown is over, display time elapsed.
+  if (timeInterval < 0) {
+    clearInterval(countdown);
+    document.getElementById("display-date").innerHTML = "TIME ELAPSED";
+  }
+}, 1000);
