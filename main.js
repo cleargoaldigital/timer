@@ -29,6 +29,7 @@ class Clock{
                .replace('m', mins)
                .replace('s', secs)
       console.log(result)
+
    }
 
    stop () {
@@ -42,12 +43,12 @@ class Clock{
 }
 
 let myTimer = new Clock({template: 'h:m:s'});
-myTimer.start();
-myTimer.stop();
+// myTimer.start();
+// myTimer.stop();
 
-let output = document.getElementById('output');
+const display = document.getElementById('display');
 
-output.textContent = myTimer.start();
+display.textContent = myTimer.start();
 
 let start = document.getElementById('start');
 start.addEventListener("click", startTimer);
