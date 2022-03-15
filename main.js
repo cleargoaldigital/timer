@@ -50,15 +50,15 @@ let output = document.getElementById('output');
 output.textContent = myTimer.start();
 
 let start = document.getElementById('start');
-document.addEventListener("click", startTimer);
+start.addEventListener("click", startTimer);
 
 function startTimer() {
-  document.getElementById("start").innerHTML = "Start";
+   myTimer.start();
 }
 
 let stop = document.getElementById('stop');
-document.addEventListener("click", stopTimer);
+stop.addEventListener("click", stopTimer);
 
 function stopTimer() {
-  document.getElementById("stop").innerHTML = "Stop";
+   myTimer.stop();
 }
